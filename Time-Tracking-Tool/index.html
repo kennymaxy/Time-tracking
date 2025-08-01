@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Tracking Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main container -->
+  <div class="container">
+    <h1>Time Tracking Tool</h1>
+
+    <!-- Input for task name -->
+    <input type="text" id="taskNameInput" placeholder="Enter task name">
+
+    <!-- Buttons to control the timer -->
+    <div class="controls">
+      <button onclick="startTracking()">Start</button>
+      <button onclick="stopTracking()">Stop</button>
+      <button onclick="resetTracking()">Reset</button>
+    </div>
+
+    <!-- Display for tracking time -->
+    <div class="time-display" id="timeDisplay">00:00:00</div>
+
+    <!-- Task log section -->
+    <h2>Task Log</h2>
+    <ul id="taskLog"></ul>
+
+    <!-- Alarm section -->
+    <h2>Set Alarm</h2>
+    <input type="time" id="alarmTimeInput">
+    <button onclick="setAlarm()">Set Alarm</button>
+    <button onclick="cancelAlarm()">Cancel Alarm</button>
+
+    <!-- Countdown timer section -->
+    <h2>Countdown Timer</h2>
+    <input type="number" id="countdownDuration" placeholder="Duration in seconds">
+    <button onclick="startCountdown()">Start Countdown</button>
+    <button onclick="pauseCountdown()">Pause Countdown</button>
+    <button onclick="resetCountdown()">Reset Countdown</button>
+    <div id="countdownDisplay">00:00</div>
+
+    <!-- Reminder section -->
+    <h2>Reminders</h2>
+    <input type="datetime-local" id="reminderTimeInput">
+    <input type="text" id="reminderMessageInput" placeholder="Reminder message">
+    <button onclick="setReminder()">Set Reminder</button>
+    <ul id="reminderList"></ul>
+
+    <!-- Notification section -->
+    <h2>Notifications</h2>
+    <input type="text" id="notificationMessageInput" placeholder="Notification message">
+    <button onclick="sendNotification()">Send Notification</button>
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+</html>
