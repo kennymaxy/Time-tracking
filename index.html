@@ -1,0 +1,36 @@
+<!-- HTML document for the Time Tracking Tool -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Tracking Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main container -->
+  <div class="container">
+    <h1>Time Tracking Tool</h1>
+
+    <!-- Input for task name -->
+    <input type="text" id="taskNameInput" placeholder="Enter task name">
+
+    <!-- Buttons to control the timer -->
+    <div class="controls">
+      <button onclick="startTracking()">Start</button>
+      <button onclick="stopTracking()">Stop</button>
+      <button onclick="resetTracking()">Reset</button>
+    </div>
+
+    <!-- Display for tracking time -->
+    <div class="time-display" id="timeDisplay">00:00:00</div>
+
+    <!-- Task log section -->
+    <h2>Task Log</h2>
+    <ul id="taskLog"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
